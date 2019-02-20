@@ -1,0 +1,3 @@
+# SpeakerRecognition_tutorial
+
+LG전자 서초R&D캠퍼스 강의 - 
