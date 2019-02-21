@@ -20,7 +20,7 @@ matplotlib 2.1.0
 24000개 파일, 240개 폴더(240명 화자)  
 feat_logfbank_nfilt40 - train
 
-### 2. 등록 및 테스트 
+### 2. 등록 및 테스트 DB
 20개 파일, 10개 폴더(10명 화자)  
 feat_logfbank_nfilt40 - test
 
