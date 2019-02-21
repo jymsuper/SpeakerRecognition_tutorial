@@ -109,7 +109,7 @@ def main():
     use_cuda = True
     log_dir = 'model_saved'
     embedding_size = 128
-    cp_num = 28 # Which checkpoint to use?
+    cp_num = 24 # Which checkpoint to use?
     n_classes = 240
     test_frames = 200
     
