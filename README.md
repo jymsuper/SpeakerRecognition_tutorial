@@ -22,3 +22,8 @@ enroll.py
 ### 3. 테스트
 verification.py - 화자검증  
 identification.py - 화자식별  
+
+
+
+### 문의
+dudans@kaist.ac.kr
