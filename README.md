@@ -21,7 +21,7 @@ matplotlib 2.1.0
 feat_logfbank_nfilt40 - train
 
 ### 2. 등록 및 테스트 
-20개 파일, 10개 폴더(10명 화자)
+20개 파일, 10개 폴더(10명 화자)  
 feat_logfbank_nfilt40 - test
 
 ## * 사용법
