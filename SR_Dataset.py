@@ -32,16 +32,7 @@ def convert_wav_to_feat_name(filename):
     output_filename = os.path.join(output_foldername, filename_only)
     return output_foldername, output_filename
 
-# For loader
-# def read_MFB(filename):
     
-    # with open(filename, 'rb') as f:
-        # feat_and_label = pickle.load(f)
-    
-    # feature = feat_and_label['feat'] # size : (n_frames, dim=40)
-    # label = feat_and_label['label'] # b'id10293' => byte
-    # return feature, label # 'id10293' => str 
-
 def read_MFB(filename):
     with open(filename, 'rb') as f:
         feat_and_label = pickle.load(f)

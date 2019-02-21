@@ -23,7 +23,7 @@ class background_resnet(nn.Module):
         else:
             raise RuntimeError('unknown backbone: {}'.format(backbone))
             
-        self.fc0 = nn.Linear(256, embedding_size)
+        self.fc0 = nn.Linear(128, embedding_size)
         self.bn0 = nn.BatchNorm1d(embedding_size)
         self.relu = nn.ReLU()
         self.last = nn.Linear(embedding_size, num_classes)
@@ -43,7 +43,7 @@ class background_resnet(nn.Module):
         out = torch.squeeze(out) # [batch, n_embed]
         # flatten the out so that the fully connected layer can be connected from here
         out = out.view(x.size(0), -1) # (n_batch, n_embed)
-        spk_embedding = out
+        spk_embedding = self.fc0(out)
         out = F.relu(self.bn0(spk_embedding)) # [batch, n_embed]
         out = self.last(out)
         

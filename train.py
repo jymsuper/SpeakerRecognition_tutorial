@@ -2,12 +2,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torchvision.transforms as transforms
-#from torch.autograd import Variable
-import torch.backends.cudnn as cudnn
 
 import time
-import shutil
-import warnings
 import os
 import numpy as np
 import configure as c
@@ -57,7 +53,7 @@ def split_train_dev(train_feat_dir, valid_ratio):
     train_DB = train_DB.reset_index(drop=True)
     valid_DB = valid_DB.reset_index(drop=True)
     print('\nTraining set %d utts (%0.1f%%)' %(train_len, (train_len/total_len)*100))
-    print('Development set %d utts (%0.1f%%)' %(valid_len, (valid_len/total_len)*100))
+    print('Validation set %d utts (%0.1f%%)' %(valid_len, (valid_len/total_len)*100))
     print('Total %d utts' %(total_len))
     
     return train_DB, valid_DB
@@ -72,9 +68,6 @@ def main():
     # order to prevent any memory allocation on unused GPUs
     use_cuda = True
     
-    #if use_cuda:
-    #    cudnn.benchmark = True
-    
     log_dir = 'model_saved'
     
     if not os.path.exists(log_dir):
@@ -88,7 +81,6 @@ def main():
     
     lr = 1e-1 # Initial learning rate
     wd = 1e-4 # Weight decay (L2 penalty)
-    momentum = 0.9 # Momentum factor
     optimizer_type = 'sgd' # ex) sgd, adam, adagrad
     
     batch_size = 64 # Batch size for training 
@@ -100,12 +92,11 @@ def main():
     
     if use_cuda:
         model.cuda()
-        
     
     # define loss function (criterion), optimizer and scheduler
     criterion = nn.CrossEntropyLoss()
     optimizer = create_optimizer(optimizer_type, model, lr, wd)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', patience=1, min_lr=1e-4, verbose=1)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'min', patience=2, min_lr=1e-4, verbose=1)
     
     train_loader = torch.utils.data.DataLoader(dataset=train_dataset,
                                                        batch_size=batch_size,
@@ -284,7 +275,7 @@ def visualize_the_losses(train_loss, valid_loss):
     
     plt.xlabel('epochs')
     plt.ylabel('loss')
-    plt.ylim(0, 4) # consistent scale
+    plt.ylim(0, 3.5) # consistent scale
     plt.xlim(0, len(train_loss)+1) # consistent scale
     plt.grid(True)
     plt.legend()
