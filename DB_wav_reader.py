@@ -6,28 +6,6 @@ Output : 1) Make DB structure using pd.DataFrame which has 3 columns (file id, f
             => 'read_DB_structure' function
          2) Read a wav file from DB structure
             => 'read_audio' function
-
-<corpus root> Speaker_robot_DB
-    |
-    .- S1_light_700_mod/
-    |        |
-    |        .- C001F2/
-    |        |     |
-    |        |     .- C001F2INDE001.txt
-    |        |     |
-    |        |     .- C001F2INDE001.wav
-    |        |     |
-    |        |     .- C001F2INDE002.txt
-    |        |     |
-    |        |     ...
-    |        |
-    |        .- C001M3/
-    |              |
-    |              ...
-    |
-    .- Etri_readsent/
-    |        | ...
-
 """
 import logging
 import os
