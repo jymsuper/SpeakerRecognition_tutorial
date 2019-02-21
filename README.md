@@ -11,13 +11,14 @@ pickle 4.0
 matplotlib 2.1.0  
 
 
+
 ## 사용법
-### 1. 훈련  
+### 1. 훈련
 train.py  
 
-### 2. 등록  
+### 2. 등록
 enroll.py  
 
-### 3. 테스트  
+### 3. 테스트
 verification.py - 화자검증  
 identification.py - 화자식별  
