@@ -14,6 +14,7 @@ matplotlib 2.1.0
 원거리 음성대화 로봇과제 2차년도 수집 DB
 - SNS단문 낭독 음성 DB (ETRI 낭독체)
 - 원거리, 무잡음 음성, 1m 거리, 0도 방향, 16kHz, 16bits  
+
 위의 DB를 이용하여 추출한 log mel filterbank energy feature를 업로드하였습니다.
 
 ### 1. 훈련 DB
