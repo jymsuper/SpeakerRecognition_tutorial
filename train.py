@@ -13,11 +13,9 @@ from SR_Dataset import read_MFB, TruncatedInputfromMFB, ToTensorInput, ToTensorD
 from model.model import background_resnet
 import matplotlib.pyplot as plt
 
-def load_dataset():
+def load_dataset(val_ratio):
     # Load training set and validation set
     
-    # Percentage of validation set
-    val_ratio = 10 
     
     # Split training set into training set and validation set according to "val_ratio"
     train_DB, valid_DB = split_train_dev(c.TRAIN_FEAT_DIR, val_ratio) 
@@ -59,21 +57,10 @@ def split_train_dev(train_feat_dir, valid_ratio):
     return train_DB, valid_DB
 
 def main():
-    train_dataset, valid_dataset, n_classes = load_dataset()
-    
-    # print the experiment configuration
-    print('\nNumber of classes (speakers):\n{}\n'.format(n_classes))
-    
-    # set the device to use by setting CUDA_VISIBLE_DEVICES env variable in
-    # order to prevent any memory allocation on unused GPUs
-    use_cuda = True
-    
-    log_dir = 'model_saved'
-    
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
     
     # Set hyperparameters
+    use_cuda = True # use gpu or cpu
+    val_ratio = 10 # Percentage of validation set
     embedding_size = 128
     start = 1 # Start epoch
     n_epochs = 30 # How many epochs?
@@ -87,6 +74,17 @@ def main():
     valid_batch_size = 16 # Batch size for validation
     use_shuffle = True # Shuffle for training or not
     
+    # Load dataset
+    train_dataset, valid_dataset, n_classes = load_dataset(val_ratio)
+    
+    # print the experiment configuration
+    print('\nNumber of classes (speakers):\n{}\n'.format(n_classes))
+    
+    log_dir = 'model_saved' # where to save checkpoints
+    
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
+        
     # instantiate model and initialize weights
     model = background_resnet(embedding_size=embedding_size, num_classes=n_classes)
     
