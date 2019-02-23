@@ -17,7 +17,8 @@ matplotlib 2.1.0
 
 DB 정보
 - SNS단문 낭독 음성 DB (ETRI 낭독체)
-- 1m 거리의 무잡음 음성, 0도 방향, 16kHz, 16bits  
+- 1m 거리의 무잡음 음성, 0도 방향
+- 16kHz, 16bits  
 
 위의 DB를 이용하여 추출한 log mel filterbank energy feature를 업로드하였습니다.
 
