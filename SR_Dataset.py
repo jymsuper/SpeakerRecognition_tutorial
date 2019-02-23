@@ -8,31 +8,6 @@ import numpy as np
 import configure as c
 from DB_wav_reader import read_DB_structure
 
-def convert_wav_to_feat_name(filename):
-    """
-    Converts the wav dir (in DB folder) to feat dir(in feat folder)
-    ex) input : '/data/DB/Speaker_robot_train_DB/Etri_sponspeech/0271M3/0271M30FC204.wav'
-    output_foldername : '/home/administrator/.../data/train_logfbank_nfilt40/Etri_sponspeech/0271M3/'
-    output_filename : '/home/administrator/.../data/train_logfbank_nfilt40/Etri_sponspeech/0271M3/0271M30FC204.p'
-    """
-    filename_only = filename.split('/')[-1].replace('.wav','.p') # ex) SNR084F2MIC102051_ch01.wav (pickle format)
-    speaker_folder = filename.split('/')[-2] # ex) 084F2102
-    dataset_folder = filename.split('/')[-3] # ex) train
-    if c.USE_LOGSCALE == True:
-        feature_type = 'logfbank'
-    elif c.USE_LOGSCALE == False:
-        feature_type = 'fbank'
-
-    if c.USE_DELTA == True:
-        root_folder = 'feat_' + feature_type + '_nfilt' + str(c.FILTER_BANK) + '_del2'
-    else:
-        root_folder = 'feat_' + feature_type + '_nfilt' + str(c.FILTER_BANK)
-        
-    output_foldername = os.path.join(root_folder, dataset_folder, speaker_folder)
-    output_filename = os.path.join(output_foldername, filename_only)
-    return output_foldername, output_filename
-
-    
 def read_MFB(filename):
     with open(filename, 'rb') as f:
         feat_and_label = pickle.load(f)
