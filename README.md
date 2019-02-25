@@ -23,11 +23,11 @@ DB 정보
 위의 DB를 이용하여 추출한 log mel filterbank energy feature를 업로드하였습니다.
 
 ### * 훈련 DB
-24000개 파일, 240개 폴더(240명 화자)  
+24000개 파일, 240개 폴더(240명 화자), 용량:3GB
 feat_logfbank_nfilt40 - train
 
 ### * 등록 및 테스트 DB
-20개 파일, 10개 폴더(10명 화자)  
+20개 파일, 10개 폴더(10명 화자), 용량:11MB
 feat_logfbank_nfilt40 - test
 
 ## 사용법
