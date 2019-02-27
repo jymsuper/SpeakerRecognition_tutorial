@@ -11,7 +11,7 @@ pickle 4.0
 matplotlib 2.1.0  
 
 ## Datasets
-We used the datasets collected through the following tasks.
+We used the dataset collected through the following task.
 - No. 10063424, 'development of distant speech recognition and multi-task dialog processing technologies for in-door conversational robots'
 
 Specification
@@ -37,8 +37,10 @@ train.py
 enroll.py  
 
 ### 3. Testing
-verification.py - speaker verification  
-identification.py - speaker identification
+For speaker verification,  
+```python verification.py```    
+For speaker identification,  
+```python identification.py```
 
 
 
