@@ -22,11 +22,13 @@ Specification
 We uploaded log mel filterbank energy features extracted from the above dataset.
 
 ### * Train
-24000 utterances, 240 folders(240 speakers), size:3GB  
+24000 utterances, 240 folders(240 speakers)  
+size:3GB  
 ```feat_logfbank_nfilt40 - train```
 
 ### * Enroll & test
-20 utterances, 10 folders(10 speakers), size:11MB  
+20 utterances, 10 folders(10 speakers)  
+size:11MB  
 ```feat_logfbank_nfilt40 - test```
 
 ## Usage
@@ -38,7 +40,8 @@ enroll.py
 
 ### 3. Testing
 For speaker verification,  
-```python verification.py```    
+```python verification.py```  
+
 For speaker identification,  
 ```python identification.py```
 
