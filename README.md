@@ -16,7 +16,7 @@ We used the dataset collected through the following task.
 
 Specification
 - short SNS read speech corpus (ETRI read speech)
-- Clean speech at 1m
+- Clean speech at a distance of 1m and a direction of 0 degrees
 - 16kHz, 16bits  
 
 We uploaded log mel filterbank energy features extracted from the above dataset.
