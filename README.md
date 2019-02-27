@@ -20,7 +20,7 @@ Specification
 - Clean speech at a distance of 1m and a direction of 0 degrees
 - 16kHz, 16bits  
 
-We uploaded log mel filterbank energy features extracted from the above dataset.  
+We uploaded 40-dimensional log mel filterbank energy features extracted from the above dataset.  
 [python_speech_features](https://github.com/jameslyons/python_speech_features) library is used.
 
 ### * Train
@@ -34,10 +34,14 @@ Size : 11MB
 ```feat_logfbank_nfilt40 - test```
 
 ## Usage
-### 1. Training
+### 1. Training  
+Background model (ResNet based speaker classifier) is trained.  
 ```python train.py```  
 
-### 2. Enrollment
+### 2. Enrollment  
+Extract the speaker embedding (d-vector) using 10 enrollment speech files.  
+It is extracted from the last hidden layer of the background model.  
+All the embeddings are saved in 'enroll_embeddings' folder.  
 ```python enroll.py```  
 
 ### 3. Testing
