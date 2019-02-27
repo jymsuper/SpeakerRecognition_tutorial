@@ -41,8 +41,8 @@ You can change settings for training in 'train.py' file.
 ```python train.py```  
 
 ### 2. Enrollment  
-Extract the speaker embedding (d-vector) using 10 enrollment speech files.  
-It is extracted from the last hidden layer of the background model.  
+Extract the speaker embeddings (d-vectors) using 10 enrollment speech files.  
+They are extracted from the last hidden layer of the background model.  
 All the embeddings are saved in 'enroll_embeddings' folder.  
 
 ```python enroll.py```  
@@ -52,7 +52,7 @@ For speaker verification,  you can change settings for testing in 'verification.
 
 ```python verification.py```  
 
-For speaker identification,  you can change settings for testing in 'verification.py' file.  
+For speaker identification,  you can change settings for testing in 'identification.py' file.  
 
 ```python identification.py```
 
