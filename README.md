@@ -15,7 +15,7 @@ We used the dataset collected through the following task.
 - No. 10063424, 'development of distant speech recognition and multi-task dialog processing technologies for in-door conversational robots'
 
 Specification
-- Short SNS read speech corpus (ETRI read speech)
+- Korean read speech corpus (ETRI read speech)
 - Clean speech at a distance of 1m and a direction of 0 degrees
 - 16kHz, 16bits  
 
