@@ -1,7 +1,6 @@
 # SpeakerRecognition_tutorial
 
-A pytorch implementation of d-vector based speaker recognition system. 
-
+A pytorch implementation of d-vector based speaker recognition system.  
 All the features for training and testing are uploaded. 
 
 ## Requirements
