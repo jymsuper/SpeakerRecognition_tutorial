@@ -48,11 +48,11 @@ All the embeddings are saved in 'enroll_embeddings' folder.
 ```python enroll.py```  
 
 ### 3. Testing
-For speaker verification,  you can change settings for testing in 'verification.py' file.  
+For speaker verification,  you can change settings in 'verification.py' file.  
 
 ```python verification.py```  
 
-For speaker identification,  you can change settings for testing in 'identification.py' file.  
+For speaker identification,  you can change settings in 'identification.py' file.  
 
 ```python identification.py```
 
