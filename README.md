@@ -36,12 +36,15 @@ Size : 11MB
 ## Usage
 ### 1. Training  
 Background model (ResNet based speaker classifier) is trained.  
+You can change the hyperparameters for training in 'train.py' file.
+
 ```python train.py```  
 
 ### 2. Enrollment  
 Extract the speaker embedding (d-vector) using 10 enrollment speech files.  
 It is extracted from the last hidden layer of the background model.  
 All the embeddings are saved in 'enroll_embeddings' folder.  
+
 ```python enroll.py```  
 
 ### 3. Testing
