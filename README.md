@@ -36,7 +36,7 @@ Size : 11MB
 ## Usage
 ### 1. Training  
 Background model (ResNet based speaker classifier) is trained.  
-You can change the hyperparameters for training in 'train.py' file.
+You can change settings for training in 'train.py' file.
 
 ```python train.py```  
 
@@ -48,12 +48,13 @@ All the embeddings are saved in 'enroll_embeddings' folder.
 ```python enroll.py```  
 
 ### 3. Testing
-For speaker verification,  
+For speaker verification,  you can change settings for testing in 'verification.py' file.  
+
 ```python verification.py```  
 
-For speaker identification,  
-```python identification.py```
+For speaker identification,  you can change settings for testing in 'verification.py' file.  
 
+```python identification.py```
 
 
 ## Author
