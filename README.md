@@ -17,7 +17,7 @@ Specification
 - Clean speech at a distance of 1m and a direction of 0 degrees
 - 16kHz, 16bits  
 
-We uploaded log mel filterbank energy features extracted from the above dataset.
+We uploaded log mel filterbank energy features extracted from the above dataset.  
 [python_speech_features](https://github.com/jameslyons/python_speech_features) library is used.
 
 ### * Train
