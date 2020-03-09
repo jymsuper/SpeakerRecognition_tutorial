@@ -77,6 +77,7 @@ def find_feats(directory, pattern='**/*.p'):
 
 #### 3. Change the line 12 in SR_Dataset.py  
 ``` 
+def read_MFB(filename):
     with open(filename, 'rb') as f:
         feat_and_label = pickle.load(f)
         
