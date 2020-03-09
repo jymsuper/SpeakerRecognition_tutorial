@@ -59,7 +59,7 @@ For speaker identification,  you can change settings in 'identification.py' file
 
 ## How to train using your own dataset
 #### 1. Modify the line 21 in train.py  
-- train_DB, valid_DB = split_train_dev(c.TRAIN_FEAT_DIR, val_ratio)  
+``` train_DB, valid_DB = split_train_dev(c.TRAIN_FEAT_DIR, val_ratio) ```  
 - 'c.TRAIN_FEAT_DIR' in configure.py should be the path of your dataset  
 - 'c.TRAIN_FEAT_DIR' should have the structure as: FEAT_DIR/speaker_folders/features_files.p  
 
