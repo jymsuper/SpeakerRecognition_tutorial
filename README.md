@@ -58,24 +58,28 @@ For speaker identification,  you can change settings in 'identification.py' file
 ```python identification.py```
 
 ## How to train using your own dataset
-### 1. Modify the line 21 in train.py  
+#### 1. Modify the line 21 in train.py  
 - train_DB, valid_DB = split_train_dev(c.TRAIN_FEAT_DIR, val_ratio)  
 - 'c.TRAIN_FEAT_DIR' in configure.py should be the path of your dataset  
 - 'c.TRAIN_FEAT_DIR' should have the structure as: FEAT_DIR/speaker_folders/features_files.p  
 
-### 2. Modify the line 31 in DB_wav_reader.py  
+#### 2. Modify the line 31 in DB_wav_reader.py  
 I assumed that all the features are extracted in '.p' format.  
 If you want to change the extension, please change line 31 in DB_wav_reader.py  
 - pattern='**/*.p' should be changed according to your feature format.  
-- If you don't extract features yet, please do that using python_speech_features library (it is explained in the README.md). 
+- If you don't extract features yet, please do that using python_speech_features library.  
 - I didn't upload the code for feature extraction. Of course, you can use other libraries.  
 
-### 3. Change the line 12 in SR_Dataset.py  
+#### 3. Change the line 12 in SR_Dataset.py  
 - It is assumed that the feature file format is pickle. You need to change the code according to the format.  
 - You have to change the function 'read_MFB' according to your situation.  
 - From line 12 to line 16, we load feature (it is assumed the feature is saved using pickle) and label.  
 - Feature size should be (n_frames, dim) as written in the comment. Label should be the speaker identity in string.  
 - You can remove from line 20 to 24 because it is assumed that the front and back of the utterance is silence.  
+
+#### 4. Change other options
+- Be aware that all the settings are set to the small dataset as the training set in this tutorial is very small.  
+- According to your dataset, you can make the model wider (increase the number of channels) and longer (change to the ResNet-34) or increase the number of input frames ('NUM_WIN_SIZE' in configure.py)  
 
 ## Author
 Youngmoon Jung (dudans@kaist.ac.kr) at KAIST, South Korea
