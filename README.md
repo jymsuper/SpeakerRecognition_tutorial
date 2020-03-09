@@ -64,6 +64,7 @@ For speaker identification,  you can change settings in 'identification.py' file
 - 'c.TRAIN_FEAT_DIR' should have the structure as: FEAT_DIR/speaker_folders/features_files.p  
 
 #### 2. Modify the line 31 in DB_wav_reader.py  
+``` def find_feats(directory, pattern='**/*.p'): ```  
 - I assumed that all the features are extracted in '.p' format.  
 - If you want to change the extension, please change line 31 in DB_wav_reader.py  
 - pattern='**/*.p' should be changed according to your feature format.  
@@ -71,6 +72,8 @@ For speaker identification,  you can change settings in 'identification.py' file
 - I didn't upload the code for feature extraction. Of course, you can use other libraries.  
 
 #### 3. Change the line 12 in SR_Dataset.py  
+``` with open(filename, 'rb') as f: ```
+```      feat_and_label = pickle.load(f) ```
 - It is assumed that the feature file format is pickle. You need to change the code according to the format.  
 - You have to change the function 'read_MFB' according to your situation.  
 - From line 12 to line 16, we load feature (it is assumed the feature is saved using pickle) and label.  
