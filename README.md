@@ -1,7 +1,7 @@
 # SpeakerRecognition_tutorial
 
 - A pytorch implementation of d-vector based speaker recognition system.  
-- ResNet-based feature extractor, average pooling and softmax layer are implemented.  
+- ResNet-based feature extractor, average pooling and softmax layer.  
 - All the features (log Mel-filterbank features) for training and testing are uploaded.  
 - Korean manual is included ("2019_LG_SpeakerRecognition_tutorial.pdf").  
 
