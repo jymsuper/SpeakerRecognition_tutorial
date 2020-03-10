@@ -92,7 +92,7 @@ def read_MFB(filename):
 
 #### 4. Change other options
 - Be aware that all the settings are set to the small dataset as the training set in this tutorial is very small.  
-- According to your dataset, you can make the model wider (increase the number of channels) and longer (change to the ResNet-34) or increase the number of input frames ('NUM_WIN_SIZE' in configure.py).  
+- According to your dataset, you can make the model wider (increase the number of channels) and deeper (change to the ResNet-34) or increase the number of input frames ('NUM_WIN_SIZE' in configure.py).  
 - More advanced loss function or pooling method (attentive pooling...) also can be used (not implemented here).  
 
 ## Author
