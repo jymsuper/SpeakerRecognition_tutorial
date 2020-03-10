@@ -1,8 +1,9 @@
 # SpeakerRecognition_tutorial
 
-A pytorch implementation of d-vector based speaker recognition system.  
-All the features for training and testing are uploaded.  
-Korean manual is included ("2019_LG_SpeakerRecognition_tutorial.pdf").
+- A pytorch implementation of d-vector based speaker recognition system.  
+- ResNet-based feature extractor, average pooling and softmax layer are implemented.  
+- All the features (log Mel-filterbank features) for training and testing are uploaded.  
+- Korean manual is included ("2019_LG_SpeakerRecognition_tutorial.pdf").  
 
 ## Requirements
 python 3.5+  
@@ -21,7 +22,7 @@ Specification
 - Clean speech at a distance of 1m and a direction of 0 degrees
 - 16kHz, 16bits  
 
-We uploaded 40-dimensional log mel filterbank energy features extracted from the above dataset.  
+We uploaded 40-dimensional log Mel-filterbank energy features extracted from the above dataset.  
 [python_speech_features](https://github.com/jameslyons/python_speech_features) library is used.
 
 ### * Train
