@@ -74,7 +74,8 @@ def find_feats(directory, pattern='**/*.p'):
 - If you want to change the extension, please change line 31 in DB_wav_reader.py  
 - pattern='**/*.p' should be changed according to your feature format.  
 - If you didn't extract features yet, please do that using python_speech_features library.  
-- I didn't upload the code for feature extraction. Of course, you can use other libraries.  
+- I didn't upload the code for feature extraction.  
+- Of course, you can use other libraries.  
 
 #### 3. Change the line 12 in SR_Dataset.py  
 ``` 
