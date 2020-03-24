@@ -25,12 +25,12 @@ Specification
 We uploaded 40-dimensional log Mel-filterbank energy features extracted from the above dataset.  
 [python_speech_features](https://github.com/jameslyons/python_speech_features) library is used.
 
-### * Train
+- Train
 24000 utterances, 240 folders (240 speakers)  
 Size : 3GB  
 ```feat_logfbank_nfilt40 - train```
 
-### * Enroll & test
+- Enroll & test
 20 utterances, 10 folders (10 speakers)  
 Size : 11MB  
 ```feat_logfbank_nfilt40 - test```
