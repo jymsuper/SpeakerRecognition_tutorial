@@ -25,6 +25,21 @@ Specification
 We uploaded 40-dimensional log Mel-filterbank energy features extracted from the above dataset.  
 [python_speech_features](https://github.com/jameslyons/python_speech_features) library is used.
 
+You can extract the features using the code below:
+
+```
+def normalize_frames(m,Scale=True):
+    if Scale:
+        return (m - np.mean(m, axis=0)) / (np.std(m, axis=0) + 2e-12)
+    else:
+        return (m - np.mean(m, axis=0))
+
+audio, sr = librosa.load(filename, sr=sample_rate, mono=True)
+filter_banks, energies = fbank(audio, samplerate=sample_rate, nfilt=40, winlen=0.025)
+filter_banks = 20 * np.log10(np.maximum(filter_banks,1e-5))
+feature = normalize_frames(filter_banks, Scale=False)
+```
+
 #### 1. Train
 24000 utterances, 240 folders (240 speakers)  
 Size : 3GB  
