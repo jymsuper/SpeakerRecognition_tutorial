@@ -28,6 +28,8 @@ We uploaded 40-dimensional log Mel-filterbank energy features extracted from the
 You can extract the features using the code below:
 
 ```
+from python_speech_features import fbank
+
 def normalize_frames(m,Scale=True):
     if Scale:
         return (m - np.mean(m, axis=0)) / (np.std(m, axis=0) + 2e-12)
